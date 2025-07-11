@@ -30,10 +30,9 @@ jobs:
         run: pnpm build
 
       - name: Package application
-        run: pnpm release:win
+        run: pnpm dist:win
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: youtube-music-dev-windows
-          path: dist/
+          name: youtube-music-dev
